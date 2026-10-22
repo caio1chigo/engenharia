@@ -1,0 +1,118 @@
+/* Ajustes complementares do modelo Fecon */
+.btn{border-radius:8px}.svc-card,.quote-block,.plan,.rev{border-radius:12px}.photo{border-radius:14px}.menu-btn{border-radius:7px}
+/* Sete cards na mesma fileira; em telas estreitas, deslizar horizontalmente */
+.svc-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:12px;align-items:stretch}
+.svc-card{min-width:0;padding:22px 14px}.svc-card h3{font-size:19px;overflow-wrap:normal}.svc-card p{font-size:12px;line-height:1.65}
+/* Carrossel horizontal com scroll nativo */
+.review-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding:2px 0 14px;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+.review-track::-webkit-scrollbar{display:none}.review-track>.rev{flex:0 0 calc((100% - 36px)/3);min-width:0;scroll-snap-align:start;margin:0}.review-track>.rev.rv{opacity:1;transform:none}
+.review-position{font-size:12px;color:var(--mut);min-width:65px;text-align:center;font-variant-numeric:tabular-nums}
+.arrow:disabled{opacity:.3;cursor:default}.arrow:disabled:hover{background:transparent;color:var(--or)}
+/* Formulário na seção anterior ao rodapé */
+.contact-split{display:grid;grid-template-columns:.85fr 1.15fr;gap:0;background:#11161b;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.contact-copy{padding:55px max(30px,calc((100vw - 1200px)/2));padding-right:38px;background:linear-gradient(130deg,var(--or),var(--or2));display:flex;flex-direction:column;justify-content:center}
+.contact-copy .eyebrow{color:#fff}.contact-copy h2{font-size:clamp(34px,4vw,52px)}.contact-copy>p:last-child{font-size:14px;max-width:330px;color:#fff}
+.fecon-form{padding:40px max(5vw,calc((100vw - 1200px)/2)) 40px 38px;display:grid;grid-template-columns:1fr 1fr;gap:13px;align-content:center}
+.fecon-form label{font-size:11px;color:#c2cbd3}.fecon-form input,.fecon-form textarea{display:block;width:100%;padding:12px 13px;margin-top:5px;border:1px solid #3b4651;background:#ffffff04;border-radius:7px;color:#fff;font:13px/1.5 Inter,Arial,sans-serif}
+.fecon-form input::placeholder,.fecon-form textarea::placeholder{color:#8e9aa6}.fecon-form textarea{resize:vertical;min-height:98px}.fecon-form .full{grid-column:1/-1}.fecon-form .btn{justify-self:start}.fecon-form input:focus-visible,.fecon-form textarea:focus-visible{outline:2px solid var(--or);outline-offset:2px}.form-note,.fecon-form [role=status]{font-size:11px;color:#a3adb8;margin:0}
+/* Rodapé com navegação */
+.footer-complete{padding:45px 0 0}.footer-columns{display:grid;grid-template-columns:1.3fr .8fr 1fr 1fr;gap:40px;padding-bottom:35px}.footer-columns h3{font-size:20px;margin-bottom:17px}.footer-columns p,.footer-columns a:not(.brand){font-size:12px;color:var(--mut)}.footer-columns p{max-width:270px}.footer-columns nav{display:flex;position:static;flex-direction:column;align-items:flex-start;gap:8px;background:transparent;padding:0;border:0}.footer-columns nav a{font-size:12px!important;font-weight:400!important;text-transform:none!important;letter-spacing:0!important}.footer-columns nav a:hover{color:var(--or)!important}.footer-contacts{list-style:none;padding:0;margin:0}.footer-contacts li{font-size:12px;color:var(--mut);margin:8px 0}.footer-legal{border-top:1px solid #ffffff12;padding:18px 0;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;color:#7d8791;font-size:11px}.footer-legal a{color:var(--mut)}
+@media(max-width:1100px){.svc-grid{grid-template-columns:repeat(7,180px);overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:15px}.svc-card{scroll-snap-align:start}.footer-columns{gap:25px;grid-template-columns:1fr 1fr}.contact-copy{padding:40px 25px}.fecon-form{padding:30px 25px}}
+@media(max-width:760px){.review-track>.rev{flex-basis:100%}.contact-split{grid-template-columns:1fr}.contact-copy{padding:40px 5%}.fecon-form{padding:30px 5%}.footer-columns{grid-template-columns:1fr 1fr;gap:30px}.svc-grid{gap:12px}.svc-card{padding:22px 16px}}
+@media(max-width:450px){.fecon-form{grid-template-columns:1fr}.footer-columns{grid-template-columns:1fr}.fecon-form label{grid-column:1/-1}}
+@media(prefers-reduced-motion:reduce){.review-track{scroll-behavior:auto}}
+/* =========================================
+   FECON — AJUSTE FINAL DAS CORES DOS TEXTOS
+   ========================================= */
+
+/* Base para os fundos escuros */
+body {
+  color: #fff;
+}
+
+/* SEÇÕES BRANCAS: textos pretos */
+.services-cards,
+.about,
+.why-sec {
+  color: #000;
+}
+
+.services-cards .head-row h2,
+.services-cards .head-text,
+.services-cards .head-row .link,
+.about h2,
+.about p:not(.eyebrow),
+.about p.strong,
+.why-sec h2,
+.why-sec h3,
+.why-sec .sub-l,
+.why-sec .why p,
+.why-sec .num {
+  color: #000;
+}
+
+/* CARDS ESCUROS DENTRO DA SEÇÃO BRANCA */
+.services-cards .svc-card,
+.services-cards .svc-card h3,
+.services-cards .svc-card p {
+  color: #fff;
+}
+
+/* FAIXA AZUL: números e legendas brancos */
+.metrics,
+.metrics .m strong,
+.metrics .m > span {
+  color: #fff;
+}
+
+/* SEÇÕES ESCURAS: títulos e textos brancos */
+.blocks h2,
+.blocks .quote-block p,
+.blocks .tags span,
+.plans h2,
+.plans h3,
+.plans .sub,
+.plans .plan-desc,
+.plans .plan li,
+.reviews h2,
+.reviews .sub,
+.reviews .rev p,
+.reviews .who strong,
+.reviews .who small,
+.reviews .who em,
+.reviews .av,
+.how h2,
+.how h3,
+.how .sub,
+.how .step p,
+.how .circle {
+  color: #fff;
+}
+
+/* PRIMEIRA DOBRA: texto branco, destaque azul preservado */
+.hero .pill,
+.hero h1,
+.hero p {
+  color: #fff;
+}
+
+.hero h1 b {
+  color: var(--or);
+}
+
+/* CHAMADA FINAL: textos brancos */
+.cta,
+.cta h2,
+.cta p {
+  color: #fff;
+}
+
+/* Botão branco continua com texto escuro */
+.cta .btn.white {
+  color: #14181c;
+}
+
+/* RODAPÉ */
+.footer .copy {
+  color: #fff;
+}
